@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>巨大選擇障礙輪盤</Text>
+      <Image source={require('./assets/images.jpg')} ></Image>
       <StatusBar style="auto" />
     </View>
   );
