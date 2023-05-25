@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>巨大選擇障礙輪盤</Text>
-      <Image source={require('./assets/images.jpg')} ></Image>
+      <Text style = {styles.mainTitle}>吃鯊米?</Text>
+      <Image  source={require('./assets/whatToEat.png')} ></Image>
+      <Button
+        title="飯"
+      />
+
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +22,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  mainImg : {
+    marginBottom: "10rem",
+  },
+
+  mainTitle : {
+    fontSize: 100
+  }
 });
