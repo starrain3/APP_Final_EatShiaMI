@@ -1,19 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, 
+        Image, Button, Dimensions } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style = {styles.mainTitle}>吃鯊米?</Text>
-      <Image  source={require('./assets/whatToEat.png')} ></Image>
-      <Button
-        title="飯"
-      />
+      <Image style = {styles.mainImg} source={require('./assets/whatToEat.png')} ></Image>
+      <Button title="吃飯去"/>
 
       <StatusBar style="auto" />
     </View>
   );
 }
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +25,10 @@ const styles = StyleSheet.create({
   },
 
   mainImg : {
-    marginBottom: "10rem",
+    // marginBottom: "10rem",
+    height: windowWidth,
+    width: windowWidth,
+    resizeMode: "stretch"
   },
 
   mainTitle : {
